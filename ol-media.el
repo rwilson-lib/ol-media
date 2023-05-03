@@ -4,6 +4,8 @@
 
 ;; Author: Ramus Jabee Lloyd Wilson
 ;; URL: "https://github.com/rwilson-lib/ol-media"
+;; Website: "https://github.com/rwilson-lib/ol-media"
+
 
 ;; Keywords: files, outlines, hypermedia
 ;; Version: 0.1.1
