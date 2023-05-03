@@ -6,7 +6,7 @@
 ;; URL: "https://github.com/rwilson-lib/ol-media"
 
 ;; Keywords: files, outlines, hypermedia
-;; Version: 0.1
+;; Version: 0.1.1
 ;; Package-Requires: ((emacs "28.1") (mpv "0.35.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
