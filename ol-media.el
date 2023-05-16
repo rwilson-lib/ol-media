@@ -41,13 +41,6 @@
 (define-key org-media-link-keymap (kbd "C-<") 'mpv-seek-backward)
 (define-key org-media-link-keymap (kbd "C-SPC") 'mpv-pause)
 
-(org-link-set-parameters "media"
-			 :follow #'org-media-open
-			 :export #'org-media-export
-			 :keymap (append org-media-link-keymap org-mouse-map))
-
-
-
 (defcustom ol-media-supported-exts
   '(("mp3" . ("audio" "" ""))
     ("wav" . ("audio" "" ""))
