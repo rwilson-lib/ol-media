@@ -60,15 +60,10 @@ Each element in the alist has the format
 - `PARAMETERS` is an optional string representing additional parameters
 for the link type (e.g., codecs, etc.)
 
-This variable is used to configure media-related functionality in the `ol-media` module."
+This variable is used to configure media-related functionality in the
+`ol-media` module."
   :type '(alist :key-type symbol :value-type (string string string))
   :group 'ol-media)
-
-(defun org-media-keymap ()
-  "Define a keymap for mylink."
-  (define-key org-media-link-map (kbd "C->") 'mpv-seek-forward)
-  (define-key org-media-link-map (kbd "C-<") 'mpv-seek-backward))
-
 
 (defun org-media-open (path _)
   "Visit the manpage on PATH.
