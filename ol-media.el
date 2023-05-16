@@ -93,7 +93,7 @@ PATH should be a topic that can be thrown at the man command."
       (`latex (format "\\href{%s}{%s}" link description))
       (`texinfo (format "@uref{%s,%s}" link description))
       (`ascii (format "%s (%s)" description link))
-      (t link)))
+      (_ link)))
 
 (defun org-media--prepare-html-link (link description)
   "Docstr."
@@ -110,9 +110,15 @@ PATH should be a topic that can be thrown at the man command."
   Your browser does not support the video tag.
 </video>" description link type))
 
-      (t (format "<a target=\"_blank\" href=\"%s\">%s</a>" link description)))))
+      (_ (format "<a target=\"_blank\" href=\"%s\">%s</a>" link description)))))
 
-(provide ol-media)
+(org-link-set-parameters
+ "media"
+ :follow #'org-media-open
+ :export #'org-media-export
+ :keymap (append org-media-link-keymap org-mouse-map))
+
+(provide 'ol-media)
 ;;; ol-media.el ends here
 
 ;; (setq mpv-default-options '())
